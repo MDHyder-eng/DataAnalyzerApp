@@ -1,0 +1,11 @@
+# .gitignore file
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+.env
+*.git
+# The directory where your virtual environment resides:
+env/
