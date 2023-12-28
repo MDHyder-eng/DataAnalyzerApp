@@ -1,4 +1,5 @@
 import csv
+import os
 from collections import Counter
 from datetime import datetime
 
@@ -48,4 +49,9 @@ def filter_year(list_of_dictionaries, low, high):
 def parse_date(date_str):
     """Converts a date string to a datetime.date object."""
     return datetime.strptime(date_str, "%m/%d/%Y").date()
+
+def load_data():
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    csv_file_path = os.path.join(project_root, 'data', '311_Service_Requests_small.csv')
+    return read_csv(csv_file_path)
 
